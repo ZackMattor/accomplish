@@ -1,5 +1,85 @@
 <h2>Stuff people did today!</h2>
 
-<% @items.each do |item| %>
-  <p><%= item.body %></p>
-<% end %>
+<!-- Header -->
+<header>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <%= image_tag 'profile.png', class: 'img-responsive' %>
+        <div class="intro-text">
+          <span class="name">Do More!</span>
+
+          <%= form_for ProductiveItem.new do |f| %>
+            <%= f.text_field :body, placeholder: 'What did you do today?' %>
+          <% end %>
+
+          <hr class="star-light">
+          <span class="skills">Clean - Work Out - Learn a Language</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Portfolio Grid Section -->
+<section id="portfolio">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2>Stuff people did today!</h2>
+        <hr class="star-primary">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-12 text-center">
+        <% @items.each do |item| %>
+          <p><%= item.body %></p>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- About Section -->
+<section class="success" id="about">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2>About</h2>
+        <hr class="star-light">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-4 col-lg-offset-2">
+        <p><%= site_name.titleize %>'s goal is to help you feel more productive by easily tracking what you do. Whether its cleaning, learning a new language, reading, or helping a friend move, at the end of the day you might feel like you've gotten nothing major accomplished. By keeping track of your accomplishments you can look back and feel great about what you did!</p>
+      </div>
+      <div class="col-lg-4">
+        <p>Dive in deeper by setting goals. By doing so you will be reminded to focus on them.</p>
+      </div>
+      <div class="col-lg-8 col-lg-offset-2 text-center">
+        <a href="#" class="btn btn-lg btn-outline">
+          <i class="fa fa-download"></i> Install App
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="install">
+  <div class="container">
+    <div class="row">
+      <div style="padding-top: 15px;" class="col-md-3 col-md-offset-3 text-center">
+        <a href="https://itunes.apple.com/us/">
+          <%= image_tag 'ios-badge.svg', height: 45 %>
+        </a>
+      </div>
+      <div style="padding-top: 15px;" class="col-md-3 text-center">
+        <a href="https://play.google.com/store/apps/">
+          <%= image_tag 'android-badge.png', height: 45 %>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
