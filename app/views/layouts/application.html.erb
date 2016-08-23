@@ -51,8 +51,12 @@
       <!-- /.container-fluid -->
     </nav>
 
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <% if notice %>
+      <p class="notice"><%= notice %></p>
+    <% end %>
+    <% if alert %>
+      <p class="alert"><%= alert %></p>
+    <% end %>
 
     <%= yield %>
 
@@ -60,48 +64,28 @@
     <footer class="text-center">
       <div class="footer-above">
         <div class="container">
-          <div class="row">
-            <div class="footer-col col-md-4">
-              <h3>Location</h3>
-              <p>3481 Melrose Place
-              <br>Beverly Hills, CA 90210</p>
+          <div class="row" style="padding-bottom: 50px;">
+            <div style="padding-top: 15px;" class="col-md-3 col-md-offset-3 text-center">
+              <a href="https://itunes.apple.com/us/">
+                <%= image_tag 'ios-badge.svg', height: 45 %>
+              </a>
             </div>
-            <div class="footer-col col-md-4">
-              <h3>Around the Web</h3>
-              <ul class="list-inline">
-                <li>
-                  <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
-                </li>
-                <li>
-                  <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-google-plus"></i></a>
-                </li>
-                <li>
-                  <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
-                </li>
-                <li>
-                  <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin"></i></a>
-                </li>
-                <li>
-                  <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-dribbble"></i></a>
-                </li>
-              </ul>
-            </div>
-            <div class="footer-col col-md-4">
-              <h3>About Freelancer</h3>
-              <p>Freelance is a free to use, open source Bootstrap theme created by <a href="http://startbootstrap.com">Start Bootstrap</a>.</p>
+            <div style="padding-top: 15px;" class="col-md-3 text-center">
+              <a href="https://play.google.com/store/apps/">
+                <%= image_tag 'android-badge.png', height: 45 %>
+              </a>
             </div>
           </div>
         </div>
-      </div>
-      <div class="footer-below">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-12">
-              Copyright &copy; Your Website 2016
+        <div class="footer-below">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-12">
+                Copyright &copy; <%= site_name %> 2016
+              </div>
             </div>
           </div>
         </div>
-      </div>
     </footer>
 
     <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->

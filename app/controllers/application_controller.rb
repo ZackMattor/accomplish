@@ -4,6 +4,6 @@ class ApplicationController < ActionController::Base
   helper_method :site_name
 
   def site_name
-    "Goaly"
+    "Accomplish"
   end
 end
