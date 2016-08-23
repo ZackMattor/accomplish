@@ -1,0 +1,2 @@
+class ProductiveItem < ApplicationRecord
+end
