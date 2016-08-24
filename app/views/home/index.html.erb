@@ -10,7 +10,10 @@
           <span class="name">Do More!</span>
 
           <%= form_for ProductiveItem.new do |f| %>
-            <%= f.text_field :body, placeholder: 'What did you do today?' %>
+            <div class="accomplish-input">
+              <%= f.text_field :body, placeholder: 'What did you do today?', class: '' %>
+              <div class="suggestions"></div>
+            </div>
           <% end %>
 
           <hr class="star-light">

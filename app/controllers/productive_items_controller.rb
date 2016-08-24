@@ -1,5 +1,5 @@
 class ProductiveItemsController < ApplicationController
-  before_action :authenticate_user!
+  before_action :authenticate_user!, only: [:create]
 
   def create
     @productive_item = ProductiveItem.new(resource_params)
@@ -9,6 +9,12 @@ class ProductiveItemsController < ApplicationController
     else
       render json: @productive_item.errors
     end
+  end
+
+  def suggested
+    items = ProductiveItem.suggested(params['text'])
+
+    render json: items
   end
 
   private

@@ -2,12 +2,41 @@
 @import "bootstrap";
 @import "theme";
 
-.intro-text {
+.black {
+  color: black;
+}
+
+.accomplish-input {
+  width: 80%;
+  margin: 20px auto;
+  position: relative;
+  z-index: 100;
+
+  .suggestions {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    border: 2px solid #ccc;
+    background: white;
+
+    .suggestion {
+      cursor: pointer;
+      text-align: center;
+      font-size: 20px;
+      padding: 7px;
+      color: #444;
+
+      &:not(:last-child) {
+        border-bottom: 2px solid #ccc;
+      }
+    }
+  }
+
   input {
+    width: 100%;
     font-size: 30px;
     padding: 12px;
-    width: 80%;
-    margin: 20px;
     text-align: center;
+    color: black;
   }
 }

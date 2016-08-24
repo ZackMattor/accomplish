@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 gem 'activerecord-postgis-adapter'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'devise'
+gem 'faker'
 gem 'jquery-rails'
 gem 'pg'
 gem 'puma', '~> 3.0'
@@ -12,6 +13,12 @@ gem 'uglifier', '>= 1.3.0'
 
 group :development, :test do
   gem 'pry'
+  gem 'factory_girl_rails'
+  gem 'dotenv-rails'
+end
+
+group :test do
+  gem 'rspec-rails', '~> 3.5'
 end
 
 group :development do
